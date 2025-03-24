@@ -1,0 +1,16 @@
+.primary-color{
+    -fx-background-color: #fef65b;
+}
+.secondary-color{
+    -fx-background-color: #b4c6d0;
+}
+.third-color{
+    -fx-background-color: #000000;
+}
+.selected{
+    -fx-background-color: #ff0000;
+    -fx-border-width: 0 0 0 5;
+}
+.scroll-pane > .viewport{
+    -fx-background-color: #05313d;
+}

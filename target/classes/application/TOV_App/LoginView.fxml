@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.UserLoginController">
+    <children>
+        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="32.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="/images/Screenshot 2024-05-16 140415.jpg" />
+            </image>
+        </ImageView>
+        <TextArea fx:id="textWelcome" layoutX="250.0" layoutY="25.0" prefHeight="128.0" prefWidth="342.0" text="WELCOME to TOV, an independent functioning &#10;videogame platform. This application hosts a list of games,&#10;darkmode and a list of various frameworks and libraries &#10;used in the programming language Java to make this&#10;project happen! Everything you will see is free, you just have&#10;to login, if you have an account already, if not click the&#10;register button down below!" />
+        <Label layoutX="96.0" layoutY="200.0" text="LOGIN" textFill="#ffd900">
+            <font>
+                <Font name="System Bold" size="19.0" />
+            </font>
+        </Label>
+        <GridPane layoutX="55.0" layoutY="247.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="Username:" GridPane.halignment="RIGHT" />
+                <Label text="Password:" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+            </children>
+        </GridPane>
+        <GridPane layoutX="209.0" layoutY="247.0" prefHeight="60.0" prefWidth="200.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <TextField fx:id="fieldUsername" />
+                <PasswordField fx:id="fieldPassword" GridPane.rowIndex="1" />
+            </children>
+        </GridPane>
+        <Button fx:id="bSignIn" layoutX="224.0" layoutY="338.0" mnemonicParsing="false" onAction="#buttonSignIn" style="-fx-background-color: blue;" text="Sign In" textFill="WHITE" />
+        <Button fx:id="bSignUp" layoutX="369.0" layoutY="338.0" mnemonicParsing="false" onAction="#buttonSignUp" style="-fx-background-color: red;" text="Sign Up" textFill="WHITE" />
+        <Label layoutX="315.0" layoutY="341.0" text="OR">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

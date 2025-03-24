@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="662.0" prefWidth="895.0" styleClass="primary-color" stylesheets="@../../css/application.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.GameListController">
+   <left>
+      <VBox prefHeight="662.0" prefWidth="193.0" styleClass="primary-color" stylesheets="@../../css/application.css" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="58.0" prefWidth="204.0">
+               <children>
+                  <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/Screenshot 2024-05-16 140415.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="43.0" prefWidth="128.0" text="TOV Launcher">
+                     <font>
+                        <Font name="Comic Sans MS" size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="49.0" prefWidth="162.0" stylesheets="@../../css/application.css">
+               <children>
+                  <ImageView fitHeight="36.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/GameLogo.png" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="89.0" styleClass="primary-color" stylesheets="@../../css/application.css" text="Games">
+                     <font>
+                        <Font name="Comic Sans MS" size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="41.0" prefWidth="194.0">
+               <children>
+                  <ImageView fitHeight="34.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/ForumLogo.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" onAction="#buttonForum" prefHeight="35.0" prefWidth="94.0" styleClass="primary-color" stylesheets="@../../css/application.css" text="Forum">
+                     <font>
+                        <Font name="Comic Sans MS" size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="43.0" prefWidth="194.0">
+               <children>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/DocumentationLogo.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" onAction="#buttonDocumentation" prefHeight="35.0" prefWidth="151.0" styleClass="primary-color" stylesheets="@../../css/application.css" text="Documentation">
+                     <font>
+                        <Font name="Comic Sans MS" size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="45.0" prefWidth="194.0">
+               <children>
+                  <ImageView fitHeight="36.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/AdminLogo.png" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" onAction="#buttonAdmin" prefHeight="38.0" prefWidth="83.0" styleClass="primary-color" stylesheets="@../../css/application.css" text="Admin">
+                     <font>
+                        <Font name="Comic Sans MS" size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <Pane prefHeight="350.0" prefWidth="194.0" />
+            <HBox prefHeight="44.0" prefWidth="139.0">
+               <children>
+                  <ImageView fitHeight="36.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/LogOutLogo.png" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" onAction="#buttonLogOut" prefHeight="38.0" prefWidth="63.0" styleClass="primary-color" stylesheets="@../../css/application.css" text="Log Out" textFill="RED">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </left>
+   <padding>
+      <Insets left="20.0" top="20.0" />
+   </padding>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="53.0" prefWidth="682.0">
+               <children>
+                  <Pane prefHeight="42.0" prefWidth="196.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="40.0" prefWidth="682.0">
+               <children>
+                  <Pane prefHeight="100.0" prefWidth="49.0" />
+                  <Label prefHeight="38.0" prefWidth="342.0" text="LIST OF GAMES">
+                     <font>
+                        <Font name="Comic Sans MS" size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <ScrollPane prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <content>
+                  <VBox fx:id="gameListContainer" prefHeight="550.0" prefWidth="670.0" styleClass="primary-color" stylesheets="@../../css/application.css">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="58.0" text="Action">
+                           <font>
+                              <Font name="Comic Sans MS" size="17.0" />
+                           </font>
+                        </Label>
+                        <ScrollPane prefHeight="200.0" prefWidth="670.0">
+                           <content>
+                              <HBox prefHeight="146.0" prefWidth="755.0">
+                                 <children>
+                                    <VBox prefHeight="146.0" prefWidth="110.0">
+                                       <children>
+                                          <ImageView fitHeight="96.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../images/MGS5PP.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label prefHeight="18.0" prefWidth="102.0" styleClass="third-color" stylesheets="@../../css/application.css" text="Metal Gear Solid 5:" textFill="WHITE" />
+                                          <Button fx:id="action1" mnemonicParsing="false" onAction="#buttonAction1" prefHeight="26.0" prefWidth="103.0" text="The Phantom Pain">
+                                             <font>
+                                                <Font size="10.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="101.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../images/MESOW.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label prefHeight="18.0" prefWidth="96.0" styleClass="third-color" stylesheets="@../../css/application.css" text="Middle Earth:" textFill="WHITE" />
+                                          <Button fx:id="action2" mnemonicParsing="false" onAction="#buttonAction2" prefHeight="22.0" prefWidth="95.0" text="Shadow of War">
+                                             <font>
+                                                <Font size="10.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="108.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../images/ROTTR.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label prefHeight="18.0" prefWidth="94.0" styleClass="third-color" stylesheets="@../../css/application.css" text="Rise of:" textFill="WHITE" />
+                                          <Button fx:id="action3" mnemonicParsing="false" onAction="#buttonAction3" prefHeight="26.0" prefWidth="94.0" text="The Tomb Raider">
+                                             <font>
+                                                <Font size="10.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="102.0" fitWidth="114.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../images/DE1.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label prefHeight="18.0" prefWidth="99.0" styleClass="third-color" stylesheets="@../../css/application.css" text="Doom" textFill="WHITE" />
+                                          <Button fx:id="action4" mnemonicParsing="false" onAction="#buttonAction4" prefHeight="26.0" prefWidth="100.0" text="Eternal" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="105.0" fitWidth="106.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../images/ACV.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label prefHeight="18.0" prefWidth="96.0" styleClass="third-color" stylesheets="@../../css/application.css" text="Assassins Creed:" textFill="WHITE" />
+                                          <Button fx:id="action5" mnemonicParsing="false" onAction="#buttonAction5" prefHeight="26.0" prefWidth="94.0" text="Valhalla" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </content></ScrollPane>
+                        <Label prefHeight="24.0" prefWidth="71.0" text="Indie">
+                           <font>
+                              <Font name="Comic Sans MS" size="17.0" />
+                           </font>
+                        </Label>
+                        <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                           <content>
+                              <HBox prefHeight="158.0" prefWidth="665.0">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="107.0" fitWidth="107.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../images/ROOD.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label prefHeight="18.0" prefWidth="102.0" styleClass="third-color" stylesheets="@../../css/application.css" text="Return of the:" textFill="WHITE" />
+                                          <Button fx:id="action6" mnemonicParsing="false" onAction="#buttonAction6" prefHeight="26.0" prefWidth="101.0" text="Obra Dinn" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="116.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../images/OW.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Button fx:id="action7" mnemonicParsing="false" onAction="#buttonAction7" text="Outer Wilds" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="116.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../images/C.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Button fx:id="action8" mnemonicParsing="false" onAction="#buttonAction8" prefHeight="26.0" prefWidth="78.0" text="Celeste" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="120.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../images/H.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Button fx:id="action9" mnemonicParsing="false" onAction="#buttonAction9" prefHeight="26.0" prefWidth="76.0" text="Hades" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="125.0" fitWidth="112.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../images/HK.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Button fx:id="action10" mnemonicParsing="false" onAction="#buttonAction10" text="Hollow Knight" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </content></ScrollPane>
+                        <Label prefHeight="18.0" prefWidth="79.0" text="Horror">
+                           <font>
+                              <Font name="Comic Sans MS" size="17.0" />
+                           </font>
+                        </Label>
+                        <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                           <content>
+                              <HBox prefHeight="150.0" prefWidth="664.0">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="108.0" fitWidth="108.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../images/RER2.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label prefHeight="18.0" prefWidth="98.0" styleClass="third-color" stylesheets="@../../css/application.css" text="Resident Evil 2:" textFill="WHITE" />
+                                          <Button fx:id="action11" mnemonicParsing="false" onAction="#buttonAction11" prefHeight="26.0" prefWidth="97.0" text="Remastered" />
+                                       </children></VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="108.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../images/SH4TR.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label prefHeight="18.0" prefWidth="75.0" styleClass="third-color" stylesheets="@../../css/application.css" text="Silent Hill 4:" textFill="WHITE" />
+                                          <Button fx:id="action12" mnemonicParsing="false" onAction="#buttonAction12" text="The Room" />
+                                       </children></VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="110.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../images/S.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Button fx:id="action13" mnemonicParsing="false" onAction="#buttonAction13" text="Signalis" />
+                                       </children></VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="109.0" fitWidth="112.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../images/UD.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Button fx:id="action14" mnemonicParsing="false" onAction="#buttonAction14" text="Until Dawn" />
+                                       </children></VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="124.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../images/MH.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Button fx:id="action15" mnemonicParsing="false" onAction="#buttonAction15" text="Murder House" />
+                                       </children></VBox>
+                                 </children>
+                              </HBox>
+                           </content></ScrollPane>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

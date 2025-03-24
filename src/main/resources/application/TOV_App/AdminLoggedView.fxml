@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdminLoggedController">
+   <children>
+      <TableView fx:id="tableview" layoutX="60.0" layoutY="68.0" prefHeight="302.0" prefWidth="479.0">
+        <columns>
+          <TableColumn fx:id="colID" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="colUserName" prefWidth="75.0" text="Username" />
+            <TableColumn fx:id="colLastName" prefWidth="75.0" text="LastName" />
+            <TableColumn fx:id="colFirstName" prefWidth="75.0" text="FirstName" />
+            <TableColumn fx:id="colLocation" prefWidth="80.800048828125" text="Location" />
+            <TableColumn fx:id="colPassword" prefWidth="97.5999755859375" text="Password" />
+        </columns>
+      </TableView>
+      <Button fx:id="showButton" layoutX="60.0" layoutY="23.0" mnemonicParsing="false" onAction="#buttonShowUsersList" text="Show Users List" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="660.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DocumentationController">
+   <children>
+      <TextArea layoutX="5.0" layoutY="6.0" prefHeight="584.0" prefWidth="594.0" text="Documentation&#10;&#10;TOV_App was programmed in Java programming&#10;language in Intellij with Maven. The libraries used for &#10;this project were JavaFx for user interface, JPA jakarta &#10;persistence for acces to database data and&#10;Hibernate for managing database CRUD operations. &#10;The puprose of this app is to manage and showcase &#10;a collection of games, facilitate user interaction &#10;through forums, and provide administrative &#10;functionalities.">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </TextArea>
+      <Button fx:id="bMenu" layoutX="45.0" layoutY="604.0" mnemonicParsing="false" onAction="#buttonMenu" text="Menu" />
+   </children>
+</AnchorPane>
