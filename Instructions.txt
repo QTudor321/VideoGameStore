@@ -1,0 +1,52 @@
+# Instructions to Setup and Run the Java-SQL-CRUD-VideoGameStore Application
+
+Welcome to the Java-SQL-CRUD-VideoGameStore application! Follow these steps to set up and run the application from IntelliJ.
+
+## Prerequisites
+1. **Java Development Kit (JDK) 21:** Make sure you have JDK 21 installed on your system. You can download it from the [official Oracle website](https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html) or configure it in IntelliJ.
+2. **MySQL Server:** Ensure you have MySQL Server installed and running on your machine.
+
+## Step 1: Edit Launch Configuration
+1. Open the `Launch.java` class which is responsible for launching the application.
+2. Set the JDK to Java 21 in the Run/Debug configuration.
+3. Modify options -> add VM options.
+4. Set the following argument in the VM options:
+   ```
+   --module-path "C:\Program Files\Java\openjfx-21.0.6_windows-x64_bin-sdk\javafx-sdk-21.0.6\lib" --add-modules javafx.controls,javafx.fxml
+   ```
+   This ensures that the JavaFX modules are correctly added.
+
+## Step 2: Database Connectivity Setup
+1. Open the `persistence.xml` file located in the `src/main/resources/META-INF` directory.
+2. Edit the following properties in the `persistence.xml` file to match your local MySQL database configuration:
+   ```xml
+   <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/your_database_name"/>
+   <property name="javax.persistence.jdbc.user" value="your_database_username"/>
+   <property name="javax.persistence.jdbc.password" value="your_database_password"/>
+   ```
+3. Make sure your MySQL server is running and you have created the necessary database. You can use MySQL Workbench or any other database management tool to create the database.
+
+## Step 3: Creating the Database in MySQL
+1. Open MySQL Workbench or your preferred MySQL management tool.
+2. Connect to your MySQL server.
+3. Create a new database by running the following SQL command:
+   ```sql
+   CREATE DATABASE your_database_name;
+   ```
+4. Use the newly created database:
+   ```sql
+   USE your_database_name;
+   ```
+5. Create the necessary tables based on the entities defined in the `src/main/java/entity` directory. You can find the entity classes that map to your database tables and use them as a reference to create the tables.
+
+## Step 4: Run the Application
+1. With the Run/Debug configuration set and the database connectivity configured, you can now run the application.
+2. Open the `Launch.java` class and run it as a Java application.
+3. The application should start, and you will be able to interact with the GUI, log in, register, and perform CRUD operations.
+
+## Additional Notes
+- If you encounter any issues with the JavaFX library, make sure you have downloaded and correctly configured the JavaFX SDK.
+- For any problems related to MySQL connectivity, ensure that your database server is running, and the credentials provided in the `persistence.xml` file are correct.
+- If you are an admin user, you can access the admin page using the credentials stored in the database.
+
+Feel free to reach out if you have any questions or run into issues while setting up the application.
