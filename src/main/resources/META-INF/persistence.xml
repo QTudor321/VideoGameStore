@@ -9,7 +9,7 @@
         <properties>
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://127.0.0.1:3306/tovdatabase"/>
             <property name="javax.persistence.jdbc.user" value="QTudor"/>
-            <property name="javax.persistence.jdbc.password" value="Quantum132"/>
+            <property name="javax.persistence.jdbc.password" value="password"/>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
             <property name="hibernate.hbm2ddl.auto" value="update"/>
